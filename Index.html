@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adendonia Online</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="icon" type="image/x-icon" href="./src/img/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Adendonia Online</h1>
+        <div id="letraSorteada">Letra Sorteada: <span id="letra"></span></div>
+        <button id="sortearLetra">Sortear Letra</button>
+        <button id="desistir" style="display: none;">Desistir</button>
+
+        <!-- Escolha entre categorias padrão ou personalizadas -->
+        <div id="escolhaCategorias">
+            <label>
+                <input type="radio" name="categorias" value="padrao" checked> Usar Categorias Padrão
+            </label>
+            <label>
+                <input type="radio" name="categorias" value="personalizado"> Adicionar Minhas Categorias
+            </label>
+        </div>
+
+        <!-- Campo para adicionar categorias (inicialmente oculto) -->
+        <div id="adicionarCategoria" style="display: none;">
+            <input type="text" id="novaCategoria" placeholder="Digite uma nova categoria">
+            <button id="adicionar">Adicionar Categoria</button>
+        </div>
+
+        <!-- Tabela de respostas -->
+        <table id="tabelaRespostas">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Resposta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As linhas serão adicionadas dinamicamente pelo JavaScript -->
+            </tbody>
+        </table>
+
+        <button id="verificarRespostas">Verificar Respostas</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="./src/js/javascript.js"></script>
+</body>
+</html>

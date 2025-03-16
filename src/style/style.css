@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Fresh Palm';
+    src: url(./src/font/FreshPalm.otf);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f36c6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(243, 240, 240, 0.74);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#adendonia {
+    font-family: 'Fresh Palm', cursive;
+    font-weight: normal;
+}
+
+#sortearLetra {
+    font-weight: bolder;
+    background-color: #f36c6c;
+}
+
+#sortearLetra:hover {
+    font-weight: bolder;
+    background-color: #e2929267;
+    color: #f36c6c;
+}
+
+#verificarRespostas {
+    font-weight: bolder;
+    background-color: #f36c6c;
+}
+
+#verificarRespostas:hover {
+    font-weight: bolder;
+    background-color: #f36c6c6b;
+    color: #f36c6c;
+}
+
+#letraSorteada {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: 'Fresh Palm', cursive;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #030303;
+}
+
+th {
+    background-color: #fdfdfd;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#adicionarCategoria {
+    margin-bottom: 20px;
+}
+
+#novaCategoria {
+    padding: 10px;
+    font-size: 1em;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#adicionar {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#escolhaCategorias {
+    margin-bottom: 20px;
+}
+
+#escolhaCategorias label {
+    margin-right: 15px;
+    font-size: 1.1em;
+}
+
+#desistir {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f36c6c;
+    color: rgb(12, 12, 12);
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    border: #030303;
+}
+
+#desistir:hover {
+    font-weight: bolder;
+    background-color: #ff0101e8;
+    color: #0f0f0f;
+}
+
+#desistir:hover::after {
+    content: ' 🙁';  /* Adiciona o emoji da carinha triste */
+    font-size: 24px;  /* Ajuste o tamanho do emoji, se necessário */
+    margin-left: 10px;  /* Espaçamento entre o texto e o emoji */
+}
+
+/* Media Queries para tornar o layout responsivo */
+
+/* Para dispositivos pequenos (celulares) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    button {
+        font-size: 0.9em;
+    }
+    
+    #letraSorteada {
+        font-size: 1.2em;
+    }
+    
+    #novaCategoria {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Para dispositivos médios (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    button {
+        font-size: 1em;
+    }
+    
+    #letraSorteada {
+        font-size: 1.3em;
+    }
+}
+
+/* Para computadores (largura maior que 900px) */
+@media (min-width: 901px) {
+    .container {
+        width: 60%;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    button {
+        font-size: 1.2em;
+    }
+    
+    #letraSorteada {
+        font-size: 1.5em;
+    }
+}
