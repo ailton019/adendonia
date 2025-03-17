@@ -14,9 +14,9 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #ffffffa8;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 11px;
     box-shadow: 0 0 10px rgba(243, 240, 240, 0.74);
     text-align: center;
 }
@@ -142,23 +142,33 @@ button {
 
 /* Para dispositivos pequenos (celulares) */
 @media (max-width: 600px) {
+    body {
+        display: block; /* Ajuste para o layout de bloco no celular */
+    }
+
     .container {
         width: 90%;
         padding: 15px;
+        min-height: 300px; /* Garante altura mínima */
+        text-align: center;
     }
-    
+
     h1 {
         font-size: 1.2em;
+        margin-top: 10px;
     }
-    
-    button {
-        font-size: 0.9em;
-    }
-    
+
     #letraSorteada {
-        font-size: 1.2em;
+        font-size: 1.5em; /* Aumenta o tamanho da letra sorteada para celular */
+        margin-bottom: 10px;
     }
-    
+
+    #sortearLetra,
+    #verificarRespostas,
+    #desistir {
+        font-size: 1em;
+    }
+
     #novaCategoria {
         width: 100%;
         margin-right: 0;
@@ -171,15 +181,15 @@ button {
         width: 80%;
         padding: 20px;
     }
-    
+
     h1 {
         font-size: 1.5em;
     }
-    
+
     button {
         font-size: 1em;
     }
-    
+
     #letraSorteada {
         font-size: 1.3em;
     }
@@ -191,15 +201,15 @@ button {
         width: 60%;
         padding: 25px;
     }
-    
+
     h1 {
         font-size: 2em;
     }
-    
+
     button {
         font-size: 1.2em;
     }
-    
+
     #letraSorteada {
         font-size: 1.5em;
     }
