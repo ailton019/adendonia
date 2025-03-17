@@ -19,7 +19,18 @@ function reiniciarJogo() {
     document.getElementById('desistir').style.display = 'none';
     document.getElementById('escolhaCategorias').style.display = 'block';
     document.getElementById('adicionarCategoria').style.display = 'none';
+    document.getElementById('qrcodeArea').style.display = 'none'; // Oculta o QR Code ao reiniciar
     document.getElementById('novaCategoria').value = '';
+}
+
+// Função para gerar o QR Code
+function gerarQRCode(url) {
+    const containerQRCode = document.getElementById("qrcode");
+    QRCode.toCanvas(containerQRCode, url, function (error) {
+        if (error) console.error(error);
+        console.log("QR Code gerado!");
+    });
+    document.getElementById("qrcodeArea").style.display = "block";  // Exibe o QR code
 }
 
 // Função para sortear uma letra
@@ -51,6 +62,10 @@ document.getElementById('sortearLetra').addEventListener('click', () => {
         `;
         tbody.appendChild(row);
     });
+
+    // Gera o QR Code para o amigo
+    const url = window.location.href;
+    gerarQRCode(url);
 
     // Mostra o botão "Desistir"
     document.getElementById('desistir').style.display = 'inline-block';
