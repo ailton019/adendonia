@@ -6,6 +6,8 @@
     <title>Adendonia Online</title>
     <link rel="stylesheet" href="./src/style/style.css">
     <link rel="icon" type="image/x-icon" href="./src/img/favicon.png">
+    <!-- Adicionando o QRCode.js -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -45,7 +47,41 @@
 
         <button id="verificarRespostas">Verificar Respostas</button>
         <div id="resultado"></div>
+
+        <!-- Área para exibir o QR Code -->
+        <div id="qrcodeArea" style="display: none;">
+            <h3>Compartilhe o código com seu amigo para jogar juntos:</h3>
+            <canvas id="qrcode"></canvas>
+        </div>
     </div>
+
     <script src="./src/js/javascript.js"></script>
+
+    <script>
+        // Função para gerar o QR Code
+        function gerarQRCode(url) {
+            const containerQRCode = document.getElementById("qrcode");
+            QRCode.toCanvas(containerQRCode, url, function (error) {
+                if (error) console.error(error);
+                console.log("QR Code gerado!");
+            });
+            document.getElementById("qrcodeArea").style.display = "block";  // Exibe o QR code
+        }
+
+        // Função para sortear a letra e gerar o QR Code
+        document.getElementById("sortearLetra").addEventListener("click", function() {
+            const letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+            const letraSorteada = letras[Math.floor(Math.random() * letras.length)];
+
+            // Exibir a letra sorteada na tela
+            document.getElementById("letra").textContent = letraSorteada;
+
+            // Gerar o URL para o QR Code (para o segundo jogador)
+            const url = window.location.href;
+
+            // Gerar o QR Code
+            gerarQRCode(url);
+        });
+    </script>
 </body>
 </html>
