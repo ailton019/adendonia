@@ -23,7 +23,13 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    color: #000;  /* Garante que a cor do título seja visível */
+    background-color: #ffffff;  /* Adiciona um fundo para o título */
+    padding: 10px;  /* Adiciona padding para o título */
+    font-size: 2em;
+    border-radius: 10px;
+
 }
 
 #adendonia {
@@ -57,6 +63,10 @@ h1 {
     font-size: 1.5em;
     margin-bottom: 20px;
     font-family: 'Fresh Palm', cursive;
+    color: #333;  /* Garantir que a letra sorteada seja visível */
+    visibility: visible;  /* Garantir que o elemento esteja visível */
+    opacity: 1;  /* Certificar que não esteja transparente */
+    transition: opacity 0.3s ease;  /* Suaviza o efeito de transição */
 }
 
 table {
@@ -154,12 +164,12 @@ button {
     }
 
     h1 {
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin-top: 10px;
     }
 
     #letraSorteada {
-        font-size: 1.5em; /* Aumenta o tamanho da letra sorteada para celular */
+        font-size: 2em; /* Aumenta o tamanho da letra sorteada para celular */
         margin-bottom: 10px;
     }
 
@@ -183,15 +193,15 @@ button {
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     button {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     #letraSorteada {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 }
 
@@ -200,17 +210,9 @@ button {
     .container {
         width: 60%;
         padding: 25px;
+        padding-top: 390px;
     }
 
     h1 {
-        font-size: 2em;
-    }
-
-    button {
-        font-size: 1.2em;
-    }
-
-    #letraSorteada {
-        font-size: 1.5em;
-    }
-}
+        font-size: 3em;  /* Aumentei */
+    }}
